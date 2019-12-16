@@ -1,0 +1,7 @@
+.category #R18, .category #DIS {
+    display: block;
+    height: 30px;
+    width: 50px;
+    border: 1px solid white;
+    justify-content: center;
+}
