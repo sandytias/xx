@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Axios from 'axios'
 import { API_URL } from '../support/API_URL'
 import { Button } from 'reactstrap'
-import { MDBTable, MDBTableHead, MDBTableBody } from 'mdbreact'
+import { MDBTable, MDBTableHead, MDBTableBody } from 'mdbreact';
 
 class usertransaction extends Component {
     state = {
