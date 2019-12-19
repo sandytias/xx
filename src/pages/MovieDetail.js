@@ -5,7 +5,7 @@ import { API_URL } from '../support/API_URL';
 import { Button } from 'reactstrap';
 import Loader from 'react-loader-spinner';
 import { Redirect } from 'react-router-dom'
-
+import { Login } from '../redux/Action'
 
 
 class MovieDetail extends Component{
@@ -52,7 +52,7 @@ class MovieDetail extends Component{
     }
 
     onBtnReseervation = () => {
-        let { username } = this.props
+        let { username } = this.props;
         if(username){
             this.setState({ redirectPurchase: true})
         }else{
@@ -119,9 +119,9 @@ class MovieDetail extends Component{
     }
 }
 
-const mapStatetoProps = ({auth}) => {
+const mapStatetoProps = state => {
     return{
-        username: auth.username
+        username: state.user.username
     }
 }
-export default connect(mapStatetoProps)(MovieDetail);
+export default connect(mapStatetoProps, {Login})(MovieDetail);

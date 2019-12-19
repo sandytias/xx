@@ -9,9 +9,9 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import { allReducer } from './redux/Reducer'
+import Reducer from './redux/Reducer'
 
-const store = createStore (allReducer)
+const store = createStore (Reducer)
 
 ReactDOM.render(
     <Provider store = { store }>

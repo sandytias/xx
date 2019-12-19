@@ -3,7 +3,8 @@ import Axios from 'axios';
 import { Component } from 'react';
 import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBIcon, Button } from 'mdbreact';
 import CarouselPage from '../component/slider'
-import MoveCard from '../component/MovCard'
+// import MoveCard from '../component/MovCard'
+import { Link } from 'react-router-dom'
 
 
 
@@ -24,24 +25,17 @@ class Home extends Component {
     }
 
 
-    render
 
     renderUserData = () => {
         return (
             this.state.data.map((val, index) => {
                 return (
-                    <div key = {val.id}>
-                        <div className='col-4 custom-card'>
-                            <MoveCard
-                                // key={index + 5}
-                                id={val.id}
-                                title={val.name}
-                                genre={val.genre}
-                                director={val.director}
-                                duration={val.duration}
-                                image={val.image}
-                            />
-                        </div>
+                    <div key={val.id}>
+                        <MDBCard style={{ width: '22rem', margin: '20[x auto 10px auto' }}>
+                            <Link to={`/movie-detail?=${val.id}`}>
+                                <MDBCardImage style={{ height: '33rem' }} className='img-fluid' src={val.image} />
+                            </Link>
+                        </MDBCard>
                     </div>
                 )
             })
@@ -49,13 +43,23 @@ class Home extends Component {
     }
 
     render() {
-        console.log(this.state.data)
+        const style = {
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+            backgroundColor: '#f2f2f2',
+            padding: '50px 15px auto 15px',
+            margin: '4% auto 0px auto'
+        }
+
         return (
-            <div> HOME
-                <MDBRow md='10' style={{ margin: 'auto', padding: '20px 150px' }}>
+            <div style={style}>
+                {this.renderUserData()}
+                {/* <MDBRow md='10' style={{ margin: 'auto', padding: '20px 150px' }}>
                     <CarouselPage />
                     {this.renderUserData()}
-                </MDBRow>
+                </MDBRow> */}
             </div>
 
         )

@@ -10,7 +10,7 @@ const MoveCard = (props) => {
   return (
     <div className='mt-2' key={props.id}>
       <Link to={`/movie-detail?id=${props.id}`}>
-        <Card style={{width: '300px', cursor: 'pointer'}}>
+        <Card style={{width: '500px', cursor: 'pointer'}}>
           <CardImg top width="100%" src={props.image} alt="Card image cap" />
           <CardBody>
             <CardTitle className='movie-title'>{props.title}</CardTitle>

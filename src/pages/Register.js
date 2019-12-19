@@ -100,9 +100,9 @@ class Register extends Component {
     }
 }
 
-const mapStatetoProps = ({ auth }) => {
+const mapStatetoProps = (auth) => {
     return{
-        username: auth.username
+        username: auth.user.username
     }
 }
 
