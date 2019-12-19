@@ -16,7 +16,7 @@ class Managemovies extends Component {
     componentDidMount(){
         Axios.get('http://localhost:2000/movies')
         .then((res) =>  {
-            this.setState({movie:res.data})  // Memasukkan dari 'axios.get' kedalam array dataa dalam state
+            this.setState({movie:res.data})  
 
             console.log(this.state.movie)
         })

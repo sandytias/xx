@@ -69,7 +69,7 @@ class NavbarPage extends Component {
 
                             <Link to='/UserPage'>
                               <MDBDropdownItem>
-                                User Page
+                                manageMovies
                           </MDBDropdownItem>
                             </Link>
                             <Link to='/changepassword'>

@@ -20,6 +20,11 @@ class Register extends Component {
         let email = this.refs.email.value
         let password = this.refs.password.value
         let confirmPass = this.refs.password.value
+        let myInput = document.getElementById("psw");
+        let letter = document.getElementById("letter");
+        let capital = document.getElementById("capital");
+        let number = document.getElementById("number");
+        let length = document.getElementById("length");
         if(username && password && email && confirmPass){
             if(password === confirmPass){
                 Axios.get(API_URL + `/users?username=${username}`)
@@ -64,10 +69,10 @@ class Register extends Component {
                     <form className='box'>
                         <div className='p-5'>
                             <h1 style={{textAlign:"center"}}>Join Us!</h1>
-                        <input type='text' ref='username' className='form-control mt-3' placeholder='Username'/>
-                        <input type='text' ref='email' className='form-control mt-3' placeholder='Email'/>
-                        <input type='password' ref='password' className='form-control mt-3' placeholder='Password'/>
-                        <input type='password' ref='confirm' className='form-control mt-3' placeholder='Confirm Password'/>
+                        <input type='text' ref='username' className='form-control mt-3' placeholder='Username' required/>
+                        <input type='text' ref='email' className='form-control mt-3' placeholder='Email' required/>
+                        <input type='password' ref='password' className='form-control mt-3' placeholder='Password' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required/>
+                        <input type='password' ref='confirm' className='form-control mt-3' placeholder='Confirm Password' required/>
                         {
                             this.state.error
                             ?
@@ -87,6 +92,14 @@ class Register extends Component {
                         </div>
                         <div className='d-flex justify-content-center'>
                             <p className='mt-3 desc'>
+                                
+                            <h3>Password must contain the following:</h3>
+                                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                                <p id="number" class="invalid">A <b>number</b></p>
+                                <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+
+
                                 Already have an Account>
                                 <Link to='/login'>
                                     <span style={{textDecoration:'underline'}}> Login! </span>
