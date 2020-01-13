@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "first_name": "John",
+      "last_name": "Susilo",
+      "email": "john@email.com",
+      "id": 2
+    },
+    {
+      "first_name": "Ryan",
+      "last_name": "Susilo",
+      "email": "ryan@gmail.com",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "first_name": "Robert",
+      "last_name": "Brown",
+      "email": "bobbrown432@yahoo.com"
+    },
+    {
+      "id": 5,
+      "first_name": "Roger",
+      "last_name": "Bacon",
+      "email": "rogerbacon12@yahoo.com"
+    },
+    {
+      "first_name": "Lian",
+      "last_name": "Eddy ",
+      "email": "lian@mail.com",
+      "id": 6
+    }
+  ],
+  "Login" : [
+    {
+      "username" : "lian",
+      "password" : "123",
+      "role" : "user"
+    },
+    {
+      "username" : "admin",
+      "password" : "admin",
+      "role" : "admin"
+    }
+  ],
+  "products": [
+    {
+      "nama": "apel",
+      "harga": 10000,
+      "image": "https://www.parentingclub.co.id/uploads/default/files/article/578/eksperimen-menyegarkan-apel_578_Eksperimen_Menyegarkan_Apel_261-Eksperimen-Menyegarkan-Apel-th.jpg"
+    },
+    {
+      "nama": "mangga",
+      "harga": 20000,
+      "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//85/MTA-3480014/rezeki-fresh-market_rezeki-fresh-market-mangga-manalagi-buah--4--5pcs--1kg-_full02.jpg"
+    },
+    {
+      "nama": "jeruk",
+      "harga": 30000,
+      "image": "https://ayorange.files.wordpress.com/2012/09/orange_istock_000001331357x_540x405.jpg"
+    }
+  ]
+}
